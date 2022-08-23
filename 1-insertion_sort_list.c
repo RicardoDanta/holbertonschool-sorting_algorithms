@@ -3,7 +3,7 @@
 /**
  * insertion_sort_list - sorts a doubly linked list of integers
  *
- * @list:
+ * @list: list
  */
 
 void insertion_sort_list(listint_t **list)
@@ -28,6 +28,7 @@ void insertion_sort_list(listint_t **list)
 /**
  * swap_nodes - swaps two nodes in a dlinked list
  *
+ * @head: pointer the head
  * @nodeA: node A
  * @nodeB: node B
  */
