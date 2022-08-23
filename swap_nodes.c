@@ -7,7 +7,7 @@
  * @nodeB: node B
  */
 
-void swap_nodes(listint_t *nodeA, listint_t *nodeB)
+void swap_nodes(listint_t *nodeA, listint_t *nodeB, listint_t **head)
 {
 	listint_t *aux;
 	listint_t *aux_pointer[4];
@@ -16,8 +16,6 @@ void swap_nodes(listint_t *nodeA, listint_t *nodeB)
 	/* rename if out of order */
 	if (nodeB->next == nodeA)
 	{
-		printf("swapif\n");
-
 		aux = nodeA;
 		nodeA = nodeB;
 		nodeB = aux;
@@ -43,4 +41,6 @@ void swap_nodes(listint_t *nodeA, listint_t *nodeB)
 	if (nodeB->prev)
 		nodeB->prev->next = nodeB;
 
+	if (nodeB->prev == NULL)
+		*head = nodeB;
 }

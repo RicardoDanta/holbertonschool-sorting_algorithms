@@ -8,12 +8,12 @@
 
 void insertion_sort_list(listint_t **list)
 {
-	listint_t *current = *list, *aux_node = NULL;
+	listint_t *current = NULL, *aux_node = NULL;
 
 	if (list == NULL || *list == NULL)
 		return;
 
-
+	current = *list;
 	for (; current;	current = aux_node)
 	{
 		aux_node = current->next;
@@ -21,10 +21,7 @@ void insertion_sort_list(listint_t **list)
 		{
 			swap_nodes(current, current->prev, list);
 			print_list(*list);
-			if (current->prev == NULL) /* exit scenario */
-				break;
 		}
-
 	}
 }
 
