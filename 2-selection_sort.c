@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
- * selection_sort - sorts an array of integrers using the selection sort algorithm
+ * selection_sort - sorts an array of integrers
  *
  * @array: array to be sorted
  * @size: size of @array
@@ -9,7 +9,7 @@
 
 void selection_sort(int *array, size_t size)
 {
-	long unsigned int i, nextInitialPos = 0;
+	unsigned long int i, nextInitialPos = 0;
 	int current_smaller_pos = 0;
 
 
