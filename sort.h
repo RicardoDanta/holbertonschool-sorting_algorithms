@@ -27,7 +27,7 @@ void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
 
 void swap_nodes(listint_t *nodeA, listint_t *nodeB, listint_t **head);
-void swap_ints(int *array, int int_posA, int int_posB);
+void swap_ints(int *array, int int_posA, int int_posB, size_t size);
 int partition(int *array, int l, int r, size_t size);
 void recursion(int *array, int l, int r, size_t size);
 

@@ -42,15 +42,17 @@ void recursion(int *array, int l, int r, size_t size)
  * @array: array
  * @int_posA: int A pos
  * @int_posB: int B pos
+ * @size: size of @array
  */
 
-void swap_ints(int *array, int int_posA, int int_posB)
+void swap_ints(int *array, int int_posA, int int_posB, size_t size)
 {
 	int aux;
 
 	aux = array[int_posA];
 	array[int_posA] = array[int_posB];
 	array[int_posB] = aux;
+	print_array(array, size);
 }
 
 
@@ -73,13 +75,11 @@ int partition(int *array, int l, int r, size_t size)
 	{
 		if (array[j] < pivot)
 		{
-			swap_ints(array, i, j);
-			print_array(array, size);
+			swap_ints(array, i, j, size);
 			++i;
 		}
 		}
-	swap_ints(array, i, r);
-	print_array(array, size);
+	swap_ints(array, i, r, size);
 
 	return (i);
 }
