@@ -21,6 +21,7 @@ void quick_sort(int *array, size_t size)
  * @array: array
  * @l: first value
  * @r: last value
+ * @size: size of array
  */
 
 void recursion(int *array, int l, int r, size_t size)
@@ -60,14 +61,15 @@ void swap_ints(int *array, int int_posA, int int_posB)
  * @array: array
  * @l: first element
  * @r: last element
+ * @size: size of @array
  * Return: int
  */
 int partition(int *array, int l, int r, size_t size)
 {
 	int pivot = array[r];
-	int i = l;
+	int i = l, j;
 
-	for (int j = l; j < r; ++j)
+	for (j = l; j < r; ++j)
 	{
 		if (array[j] < pivot)
 		{
