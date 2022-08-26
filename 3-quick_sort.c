@@ -49,10 +49,13 @@ void swap_ints(int *array, int int_posA, int int_posB, size_t size)
 {
 	int aux;
 
-	aux = array[int_posA];
-	array[int_posA] = array[int_posB];
-	array[int_posB] = aux;
-	print_array(array, size);
+	if (array[int_posA] != array[int_posB])
+	{
+		aux = array[int_posA];
+		array[int_posA] = array[int_posB];
+		array[int_posB] = aux;
+		print_array(array, size);
+	}
 }
 
 
