@@ -71,15 +71,15 @@ int partition(int *array, int l, int r, size_t size)
 	int pivot = array[r];
 	int i = l - 1, j;
 
-	for (j = l; j <= r; ++j)
+	for (j = l; j <= r; j++)
 	{
 		if (array[j] < pivot)
 		{
 			i++;
 			swap_ints(array, i, j, size);
 		}
-		}
+	}
 	swap_ints(array, i + 1, r, size);
 
-	return (i);
+	return (i + 1);
 }
